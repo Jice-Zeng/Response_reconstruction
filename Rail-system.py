@@ -28,18 +28,18 @@ plt.rcParams.update(tueplots.axes.lines(base_width=0.5))
 
 plt.rcParams['text.usetex'] = False
 # ==========================================
-# 1. 基础有限元模型部分 (保持不变)
+# 1. Finite element model
 # ==========================================
-L = 2.5   # 轨枕长度 (m)
-b = 0.32  # 截面宽度 (m)
-h = 0.18  # 截面高度 (m)
-E_nominal = 38e9  # 标称弹性模量 (Pa)
-G = 15.2e9  # 剪切模量 (Pa)
-density = 2200  # 密度 (kg/m³)
-rail_mass_nominal = 42  # 标称钢轨质量 (kg)
-base_stiffness_nominal = 150e6  # 标称道床刚度 (N/m²)
+L = 2.5   # sleeper length (m)
+b = 0.32  # cross-section width (m)
+h = 0.18  # cross-section height (m)
+E_nominal = 38e9  # nominal elastic modulus (Pa)
+G = 15.2e9  # shear modulus (Pa)
+density = 2200  # density (kg/m³)
+rail_mass_nominal = 42  # nominal rail mass (kg)
+base_stiffness_nominal = 150e6  # nominal ballast stiffness (N/m²)
 
-# 截面属性
+# cross-section properties
 A = b * h
 A_shear = 0.8 * A
 I = b * h ** 3 / 12
